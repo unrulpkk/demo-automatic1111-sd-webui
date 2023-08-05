@@ -57,7 +57,7 @@ def init():
 
     modules.script_callbacks.app_started_callback(None, app_fastapi)
     register_model(model=model)
-
+    return {}
 @app.handler(route="/txt2img")
 def handler(context: dict, request: Request) -> Response:
     params = request.json.get("params")
